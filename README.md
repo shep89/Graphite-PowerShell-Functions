@@ -201,7 +201,7 @@ If you want to remove a service, read the NSSM documentation [http://nssm.cc/com
 
 ### Installing as a Service Using PowerShell
 1. Download nssm from [nssm.cc](http://nssm.cc) and save it into a directory
-2. Open an Administrative PowerShell consolen and browse to the directory you saved NSSM
+2. Open an Administrative PowerShell console and browse to the directory you saved NSSM
 3. Run `Start-Process -FilePath .\nssm.exe -ArgumentList 'install GraphitePowerShell "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" "-command "& { Import-Module -Name Graphite-PowerShell ; Start-StatsToGraphite }"" ' -NoNewWindow -Wait`
 4. Check the service installed successfully `Get-Service -Name GraphitePowerShell`
 5. Start the service `Start-Service -Name GraphitePowerShell`
